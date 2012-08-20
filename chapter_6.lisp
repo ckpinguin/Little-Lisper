@@ -148,7 +148,7 @@
 (defun down* (l)
   (cond
 	((null l) nil)
-	((non-atom (car l)) (cons (down* (car l)) (down* (cdr l))))
+	((non-atom? (car l)) (cons (down* (car l)) (down* (cdr l))))
 	(t (cons (list (car l)) (down* (cdr l))))))
 
 (define-test 6.1a 
