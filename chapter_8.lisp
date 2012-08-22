@@ -58,6 +58,10 @@
 
 ; something strange happens here, we don't get boolean value, we
 ; get a list with the first matching atom of the sets!
+; As I found out in chapter 9 (using recursive lambdas for or/and
+; to implement intersection/subset generically) this is because
+; or evaluates either to nil or to whatever the first non-nil
+; expression evaluates to (non-nil is considered 't logically). 
 (defun intersect2? (set1 set2)
   (cond
 	((null set1) nil)
