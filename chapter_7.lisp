@@ -2,6 +2,8 @@
 (load "lisp-unit.lisp")
 ;(ql:quickload :lisp-unit)
 (use-package :lisp-unit)
+(in-package :lisp-unit)
+
 
 (defun ^ (n m)
   (cond
